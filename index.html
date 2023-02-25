@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="heading">
+    <h1>Grade Calculator</h1>
+</div>
+
+<div class="table">
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Grade</th>
+            <th scope="col">Percentage</th>
+        </tr>
+    </thead>
+
+        <tr>
+            <td>A+</td>
+            <td>90% - 100%</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>80% - 89%</td>
+        </tr>
+        <tr>
+            <td>B+</td>
+            <td>70% - 79%</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>66% - 69%</td>
+        </tr>
+        <tr>
+            <td>C+</td>
+            <td>60% - 65%</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>56% - 59%</td>
+        </tr>
+        <tr>
+            <td>D+</td>
+            <td>50% - 55%</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>46% - 49%</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>40% - 45%</td>
+        </tr>
+        <tr>
+            <td>FAIL</td>
+            <td>0% - 39%</td>
+        </tr>
+    </table>
+</div>
+
+<div class="btn "><button onclick="gradeCalculator()">Click Here To Check Grade</button></div>
+
+
+<script>
+    function gradeCalculator(){
+    let student = prompt("Please enter only the numbers");
+    if (student > 100) {
+        alert("Please enter a valid percentage!")
+    }
+
+    else if (student <= 0){
+        alert("Please enter a valid percentage!")
+    }
+
+    else if (student <= 39){
+        alert("FAIL! (Sad)")
+    }
+
+    else if (student <= 45){
+        alert("Grade E")
+    }
+   
+    else if (student <= 49){
+        alert("Grade D")
+    }
+    
+    else if (student <= 55){
+        alert("Grade D+. Work Hard!")
+    }
+    
+    else if (student <= 59){
+        alert("Grade C. Fair!")
+    }
+    
+    else if (student <= 65){
+        alert("Grade C+. Not Bad!")
+    }
+    
+    else if (student <= 69){
+        alert("Grade B. Good!")
+    }
+    
+    else if (student <= 79){
+        alert("Keep it up! Grade B+")
+    }
+    
+    else if (student <= 89){
+        alert("Excellent! Grade A")
+    }
+    
+    else if (student >= 90){
+        alert("Congratulations! Grade A+")
+    }
+}
+    
+
+</script>
+</body>
+</html>
